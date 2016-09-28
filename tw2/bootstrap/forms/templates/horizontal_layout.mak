@@ -5,6 +5,7 @@
 % for i, c in enumerate(w.children_non_hidden):
   <div \
     class="control-group ${(getattr(c, 'required', False) and ' required' or '') + (c.error_msg and ' error' or '')}" \
+    id="${c.compound_id}:container" \
     % if w.hover_help and c.help_text:
       title="${c.help_text}" \
     % endif
