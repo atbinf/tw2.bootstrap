@@ -66,7 +66,7 @@ def replace_all(text, items):
     or a list of (old, new) tuples
     '''
     try:
-        items = items.iteritems()
+        items = items.items()
     except:
         pass
     for old, new in items:
@@ -231,6 +231,6 @@ class CalendarDateTimePicker(TextField, CalendarBase):
             else:
                 self.value = self.default
         try:
-            self.value = unicode(self.value.strftime(self.date_format))
+            self.value = str(self.value.strftime(self.date_format))
         except:
             pass
